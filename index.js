@@ -76,8 +76,8 @@ app.post("/post",(req,res)=>{
     const Apointment=req.body.Apointment;
     const Id=req.params.id;
     mysqlconvar.query("INSERT INTO newtable VALUES(?,?,?,?)",[Id,Hub,Riders,Apointment],(err)=>{if (err){console.log("Cannot post")}
-else(res.send("Post action sucessful"))
+else(res.send("Post action sucessful")) 
 })
 
 })
-app.listen(port,()=>{console.log("conected to the port:"+port)})
+app.listen(port,()=>{console.log("conected to the port:"+port)}) 
